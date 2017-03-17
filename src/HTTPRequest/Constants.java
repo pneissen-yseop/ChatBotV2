@@ -12,4 +12,14 @@ public class Constants {
 	
 	public static String CHARSET = "UTF-8";
 
+	
+	public static String url = "https://training-yseop11.studio.yseop-hosting.com/yseop-manager/direct/chatBotV3/dialog.do?transformation=dialog-direct";
+	
+	public static String login1 = "pneissen";
+	
+	public static String pwd1 = "IVd7CngOoED2AZKwk7iY";
+	
+	public static String login2 = "yseop-admin";
+	
+	public static String pwd2 = "hNNHSxQB2dcEoGlyfYautUYKv";
 }

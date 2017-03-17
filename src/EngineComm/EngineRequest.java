@@ -18,6 +18,8 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
+import HTTPRequest.Constants;
+
 import com.sun.org.apache.xml.internal.security.utils.Base64;
 
 import org.jdom2.Attribute;
@@ -36,16 +38,7 @@ import org.jdom2.xpath.XPathFactory;
 public class EngineRequest {
 	
 
-	
-	private String url = "https://training-yseop11.studio.yseop-hosting.com/yseop-manager/direct/chatBotV3/dialog.do?transformation=dialog-direct";
-	
-	private String login1 = "pneissen";
-	
-	private String pwd1 = "IVd7CngOoED2AZKwk7iY";
-	
-	private String login2 = "yseop-admin";
-	
-	private String pwd2 = "hNNHSxQB2dcEoGlyfYautUYKv";
+
 	
 	private String initInput = "/home/pneissen/Documents/fluxXML/templateInput.xml";
 	
@@ -91,12 +84,12 @@ public class EngineRequest {
 			
 		    HttpClient client = HttpClientBuilder.create().build();  // setDefaultCredentialsProvider(provider)
 		    
-		    HttpPost request = new HttpPost(url);
+		    HttpPost request = new HttpPost(Constants.url);
 		    
 		    request.setHeader("Data-Type", "xml");
 		    request.setHeader("Content-Type", "application/soap+xml; charset=UTF-8");
 
-		    String encoded = Base64.encode((login2 + ":" + pwd2).getBytes());
+		    String encoded = Base64.encode((Constants.login2 + ":" + Constants.pwd2).getBytes());
 		    //System.out.println("encoded value is " + encoded);
 		    
 		    request.setHeader("Authorization", "Basic " + encoded);
